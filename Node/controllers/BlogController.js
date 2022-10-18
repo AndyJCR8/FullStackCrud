@@ -1,4 +1,4 @@
-import BlogModel from "../models/BlogModel";
+import BlogModel from "../models/BlogModel.js";
 
 //OBTENER TODOS LOS BLOGS
 export const getAllBlogs = async (request, response) => {
