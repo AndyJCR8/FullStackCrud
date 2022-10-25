@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const URI = "http://172.17.223.27:8000/blogs/";
+//const URI = "http://172.17.223.27:8000/blogs/";
+const URI = "http://localhost:8000/blogs/";
 
 export default function ShowBlogs() {
 
@@ -45,7 +46,7 @@ export default function ShowBlogs() {
                       <td>{ blog.title }</td>
                       <td>{ blog.content }</td>
                       <td>
-                        <Link to={`/edit/${blog.id}`} className="btn btn-info">info</Link>
+                        <Link to={`/edit/${blog.id}`} className="btn btn-info"><i className="fa-solid fa-pen-to-square"></i></Link>
                         <button onClick={() => deleteBlog(blog.id)} className="btn btn-danger">
                           <i className="fa-solid fa-trash"></i>
                         </button>
